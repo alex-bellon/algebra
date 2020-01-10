@@ -1,14 +1,13 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in, top=1.5in]{geometry}
-\usepackage{fancyhdr}
-\usepackage{amsthm}
-\usepackage{amssymb}
+\usepackage{fancyhdr, amsthm, amssymb}
 
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Algebra}
 \rhead{Notes}
+\rfoot{\thepage}
 
 \begin{document}
 
@@ -28,7 +27,7 @@
     \item \textbf{Subring}: Subset which is closed under addition, subtraction, multiplication and which contains 1.
     \item \textbf{Noncommutative Ring}: Satisfies al of the above axioms, except for the commutative law for multiplication.
   \end{itemize}
-  \item \textbf{Gauss integers}: The complex numbers of the form $\textit{a} + \textit{bi}$ where \textit{a} and \textit{b} are integers form a subring of $\mathbb{C}$ that we denote by $\mathbb{Z}$[i] = \{$\textit{a} + \textit{bi} \mid \textit{a}, \textit{b} \in \mathbb{Z}$\}. Its elements are points of a square lattice in the complex plane.
+  \item \textbf{Gauss integers}: The complex numbers of the form $a + bi$ where $a$ and $b$ are integers form a subring of $\mathbb{C}$ that we denote by $\mathbb{Z}$[i] = \{$a + bi \mid b, b \in \mathbb{Z}$\}. Its elements are points of a square lattice in the complex plane.
   \begin{itemize}
     \item \textbf{$\mathbb{Z}$[$\alpha$] subring}: Ccontains every complex number $\beta$ = $a_n\alpha^n + ... + a_1\alpha + a_0$ where $a_i$ are in $\mathbb{Z}$ and $\alpha$ is a complex number.
     \begin{itemize}
@@ -45,7 +44,11 @@
   \begin{itemize}
     \item When $\alpha$ is transcendental, two distinct polynomial expressions represent distinct complex numbers, and the elements of the ring $\mathbb{Z}$[$\alpha$] correspond bijectively to polynomials $p(x)$ with integer coefficients.
   \end{itemize}
-  \item A polynomial in $x$ with coefficients in a ring $R$ is an expression of the form $a_nx^n + ... + a_1x + a_0$ with $a_i$ in $R$.
+  \item A polynomial in $x$ with coefficients in a ring $R$ is an expression of the form
+  \begin{center}
+    $a_nx^n + ... + a_1x + a_0$
+  \end{center}
+  with $a_i$ in $R$.
   \item \textbf{Zero Ring}: A ring containing only  the element 0.
   \begin{itemize}
     \item A ring $R$ in which the elements 1 and 0 are equal is the zero ring.
@@ -62,7 +65,59 @@
 \subsection*{11.2: Polynomial Rings}
 \begin{itemize}
   \item \textbf{Formal Polynomial}: A polynomial with coefficients in a ring $R$ is a (finite) linear combination of powers of the variable: $f(x) = a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0$ where the coefficients $a_i$ are elements of $R$.
+  \begin{itemize}
+    \item The set of polynomials with coefficients in a ring $R$ will be denoted $R$[$x$]
+    \item Thus $\mathbb{Z}$[$x$] is the set of \textit{integer polynomials}
+  \end{itemize}
+  \item The \textit{monomials} $x^i$ are considered independent, so if $\exists$ another polynomial with coefficients in $R$, then $f(x) = g(x)$ only if $a_i = b_i$ for all $i = 0, 1, 2, ...$
+  \item \textbf{Degree}: The \textit{degree} of a nonzero polynomial (denoted deg $f$) is the largest integer $n$ such that the coefficient $a_n$ of $x_n$ is not zero
+  \begin{itemize}
+    \item A polynomial of degree zero is called a \textit{constant} polynomial
+    \item The zero polynomial is also a constant polynomial, but its degree will not be defined
+  \end{itemize}
+  \item \textbf{Leading Coefficient}: The nonzero coefficientof highest degree of a polynomial
+  \begin{itemize}
+    \item \textbf{Monic Polynomial}: Polynomial with a leading coefficient of 1
+  \end{itemize}
+  \item A polynomial is determined by its vector of coefficients $a_i$: $a = (a_0, a_1, ...)$ where $a_i$ are elements of $R$, all but a finite number zero.
+  \item When $R$ is a field, these infinite vectors form the vector space $Z$ with the infinite basis $e_i$. The vector $e_i$ corresponds to the monomial $x_i$, and the monomials form a basis of the space of all polynomials.
+  \item \textbf{Addition of polynomials}: $f(x) + g(x) = (a_0 + b_0) + (a_1 + b_1)x + ...$ where $(a_i + b_i)$ is addition in $R$
+  \item \textbf{Multiplication of polynomials}: $f(x)g(x) = (a_0 + a_1x + ...)(b_0 + b_1x + ...)$ where $a_ib_j$ are to be evaluated in the ring $R$.
+  \item There is a unique commutative ring structure on the set of polynomials $R[x]$ having these properties:
+  \begin{itemize}
+    \item Additions of polynomials as defined above
+    \item Multiplication of polynomials as defined above
+    \item The ring $R$ becomes a subring of $R[x]$ when the elements of $R$ are identifies with the constant polynomials
+  \end{itemize}
+  \item \textbf{Division with Remainder}: Let $R$ be a ring, $f$ is a monic polynomial, and $g$ is any polynomial, both with coefficients in $R$. There are uniquely determined polynomials $q$ and $r$ in $R[x]$ s.t. $g(x) = f(x)q(x) + r(x)$ where $r$ has degree $\geqslant 0$ and $\leqslant f$
+  \begin{itemize}
+    \item Division with remainder can be done whenever the leading coefficient of $f$ is a unit
+    \item If $g(x)$ is a polynomial in $R[x]$ and $\alpha$ is an element of $R$, the remainder of division of $g(x)$ by $x - \alpha$ is $g(\alpha)$. Thus $x - \alpha$ divides $g$ in $R[x]$ iff $g(\alpha) = 0$
+  \end{itemize}
+  \item \textbf{Monomial}: a formal product of some variables $x_1, ..., x_n$ of the form
+  \begin{center}
+    $x_1^{i_1}x_2^{i_2}...x_n^{i_n}$
+  \end{center}
+  where $i_v$ are non-negative integers.
+  \begin{itemize}
+    \item \textbf{Degree}: the sum $i_1 + ... + i_n$, sometimes called \textit{total degree}
+    \item \textbf{Multi-index}: an $n$-tuple that can be represented with vector notation e.g.  $i = (i_1, ... i_n)$.
+    \item A monomial can be written as $x^i$ ($= x_1^{i_1}x_2^{i_2} ... x_n^{i_n}$) using multi-index form
+    \item The monomial $x^0$ is denoted by 1
+  \end{itemize}
+  \item With multi-index notation, a polynomial $f(x) = f(x_1, ..., x_n)$ can be written in exactly one way in the form
+  \begin{center}
+    $f(x) = \sum\limits_ia_ix^i$
+  \end{center}
+  where $i$ runs through all multi-indices $(i_1, ..., i_n)$, the coefficients $a_i$ are in $R$ and only finitely many of these coefficients are not 0.
+  \item \textbf{Homogeneous Polynomial}: A polynomial in which all monomials with nonzero coefficients have degree $d$
 \end{itemize}
+
+\subsection*{1.3: Homomorphisms and Ideals}
+\begin{itemize}
+  \item \textbf{Ring Homomorphism}: A \textit{ring homomorphism} $\phi: R \rightarrow R'$
+\end{itemize}
+
 
 \iffalse
 \subsection*{Problem 1.1}
@@ -71,6 +126,5 @@
 Since p is not in M, it is not between or equal to a and b, and therefore any interval that contains p is not within M.
 \end{proof}
 \fi
-
 
 \end{document}
