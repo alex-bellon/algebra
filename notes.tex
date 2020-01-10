@@ -113,9 +113,16 @@
   \item \textbf{Homogeneous Polynomial}: A polynomial in which all monomials with nonzero coefficients have degree $d$
 \end{itemize}
 
-\subsection*{1.3: Homomorphisms and Ideals}
+\subsection*{11.3: Homomorphisms and Ideals}
 \begin{itemize}
-  \item \textbf{Ring Homomorphism}: A \textit{ring homomorphism} $\phi: R \rightarrow R'$
+  \item \textbf{Ring Homomorphism}: A \textit{ring homomorphism} $\phi: R \rightarrow R'$ is a map from one ring to another which is compatible with the laws of composition and which carries the unit element 1 of $R$ to the unit element 1 of $R'$ - a map such that for all $a$ and $b$ in $R$,
+  \begin{center}
+    $\phi(a + b) = \phi(a) + \phi(b), \quad \phi(ab) = \phi(a)\phi(b), \quad and \quad \phi(1) = 1$
+  \end{center}
+  \begin{itemize}
+    \item The map $\phi: \mathbb{Z} \rightarrow \mathbb{F}_p$ that send an integer to its congruence class modulo $p$ is a ring homomorphism.
+  \end{itemize}
+  \item \textbf{Isomorphism}: An \textit{isomorphism} of rings is a bijective homomorphism, denoted $R \approx R'$
 \end{itemize}
 
 
