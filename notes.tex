@@ -1,7 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in, top=1.5in]{geometry}
-\usepackage{fancyhdr, amsthm, amssymb}
+\usepackage{fancyhdr, amsthm, amssymb, amsmath}
+\setlength\parindent{0pt}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -200,12 +201,238 @@
 
 \end{itemize}
 
-\iffalse
-\subsection*{Problem 1.1}
-\textbf{Prove that 7 + $\sqrt[3]{2}$ and $\sqrt{3}$ + $\sqrt{-5}$ are algeabraic numbers.}
+\section*{Chapter 11 Exercises}
+\textbf{Problem 11.1.1}: Prove that $7 + \sqrt[3]{2}$ and $\sqrt{3} + \sqrt{-5}$ are algebraic numbers
 \begin{proof}
-Since p is not in M, it is not between or equal to a and b, and therefore any interval that contains p is not within M.
+We need to show that they are roots of a nonzero polynomial with integer coefficients. We can show that $(7 + \sqrt[3]{2})^3 - 21(7 + \sqrt[3]{2})^2 + 147(7 + \sqrt[3]{2}) - 345 = 0$. This means it can be represented as the root of a polynomial, namely, $x^3 - 21x^2 + 147x - 345$. For $\sqrt{3} + \sqrt{-5}$, let $x = \sqrt{3} + \sqrt{-5}$.
+\begin{align*}
+  x^2 &= (\sqrt{3} + \sqrt{-5})(\sqrt{3} + \sqrt{-5}) \\
+  x^2 &= 3 + 2\sqrt{-15} - 5 \\
+  x^2 &= 2\sqrt{-15} - 2 \\
+  x^2 + 2 &= 2\sqrt{-15} \\
+  (x^2 + 2)^2 &= -60 \\
+  (x^2 + 2)^2 + 60 &= 0
+\end{align*}
+This means that $\sqrt{3} + \sqrt{-5}$ can be represented as the root of a polynomial.
 \end{proof}
-\fi
+
+\textbf{Problem 11.1.3}: Let $\mathbb{Q}[\alpha, \beta]$ denote the smallest subring of $\mathbb{C}$ containing the rational numbers $\mathbb{Q}$ and the elements $\alpha = \sqrt{2}$ and $\beta = \sqrt{2}$. Let $\gamma = \alpha + \beta$. Is $\mathbb{Q}[\alpha, \beta] = \mathbb{Q}[\gamma]$? Is $\mathbb{Z}[\alpha, \beta] = \mathbb{Z}[\gamma]$?
+\begin{proof}
+$\mathbb{Q}[\alpha, \beta] = \mathbb{Q}[\gamma]$. To show this, we need to show that $\mathbb{Q}[\alpha, \beta] \subseteq \mathbb{Q}[\gamma]$ and $\mathbb{Q}[\gamma] \subseteq \mathbb{Q}[\alpha, \beta]$. By definition of a subring, we know that $(\alpha + \beta) \in \mathbb{Q}[\alpha, \beta]$, so we know that $\mathbb{Q}[\gamma] \subseteq \mathbb{Q}[\alpha, \beta]$. Now we need to show that $\alpha$ and $\beta$ are in $\mathbb{Q}[\gamma]$. Since $\gamma = \alpha + \beta$, we know that $\gamma^3 = 11\alpha + 9\beta$ is also in $\mathbb{Q}[\gamma]$.
+\begin{align*}
+  \gamma^3 - 9\gamma &= 2\alpha \\
+  \frac{1}{2}\big[\gamma^3 - 9\gamma\big] &= \alpha \\
+\end{align*}
+Since $\frac{1}{2}$ is in $\mathbb{Q}$, we know that $\alpha$ is in $\mathbb{Q}[\gamma]$. A similar argument can be made to show that $\beta$ is in $\mathbb{Q}[\gamma]$. Since we have shown that $\alpha$ and $\beta$ are in $\mathbb{Q}[\gamma]$, we know that $\mathbb{Q}[\gamma] \subseteq \mathbb{Q}[\alpha, \beta]$, $\therefore \mathbb{Q}[\alpha, \beta] = \mathbb{Q}[\gamma]$. \\
+
+$\mathbb{Z}[\alpha, \beta] \neq \mathbb{Z}[\gamma]$, but I don't know how to prove it. My intuition is that the difference between the two coefficients in a $x\alpha + y\beta$ term will never be 1, and we aren't able to use fractions, so we'll never be able to get $\alpha$ or $\beta$ on its own.
+\end{proof}
+
+\textbf{Problem 11.1.6}: Decide whether or not $S$ is a subring of $R$, when
+\begin{enumerate}
+  \item[(a)] $S$ is the set of all rational numbers $a/b$, where $b$ is not divisible by 2, and $R$ = $\mathbb{Q}$
+  \begin{proof}
+    $S$ is closed under multiplication because if we multiply $\frac{a}{b}\frac{c}{d}$, we get $\frac{ac}{bd}$, and we know there is no 3 to factor out of the denominator by definition. $S$ is closed under addition because $\frac{a}{b} + \frac{c}{d} = \frac{ad + cb}{bd}$, where again, a 3 cannot be factored out of the denominator. A similar argument can be made for subtraction (since the denominator is the same). $S$ obviously contains 1 ($\frac{1}{1}$), so $S$ is a subring of $\mathbb{Q}$.
+  \end{proof}
+  \item[(b)] $S$ is the set of functions which are linear combinations with integer coefficients of the functions {1, cos $nt$, sin $nt$}, n $\in \mathbb{Z}$ and $R$ is the set of all real valued functions of $t$.
+  \begin{proof}
+    $S$ is not a subring of $R$ because it is not closed under multiplication. $sin(x)cos(x) = \frac{1}{2}sin(2x)$. Since you can't write this as a linear combination of the other functions, you know that it is not in $R$ and $S$ is not closed under multiplication.
+  \end{proof}
+\end{enumerate}
+
+\textbf{Problem 11.1.7}
+\begin{enumerate}
+  \begin{enumerate}
+    \item
+    \begin{proof}
+    \end{proof}
+    \item
+    \begin{proof}
+    \end{proof}
+  \end{enumerate}
+\end{enumerate}
+
+\textbf{Problem 11.1.8}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.2.2}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.1}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.2}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.3}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.5}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.6}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.7}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.8}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.3.9}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.4.1}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.4.2}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.5.1}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.5.2}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Problem 11.5.3}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.5.6}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.5.7}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.6.2}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.6.2}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.6.8}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.7.1}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.7.2}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.7.5}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.8.1}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.8.2}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.8.4}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.1}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.2}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.3}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.4}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.5}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.6}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.9}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.10}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.11}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.12}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.9.12}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.M.1}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.M.2}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.M.3}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.M.5}
+\begin{proof}
+
+\end{proof}
+\textbf{Problem 11.M.6}
+\begin{proof}
+
+\end{proof}
 
 \end{document}
