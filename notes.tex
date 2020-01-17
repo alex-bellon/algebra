@@ -265,6 +265,36 @@
 
 \subsection*{11.7: Fractions}
 \begin{itemize}
+  \item \textbf{Integral Domain}: A ring $R$ that is not the zero ring, and if $a$ and $b$ are elements of $R$ whose product $ab$ is zero, then $a = 0$ or $b = 0$
+  \begin{itemize}
+    \item Any subring of a field is a domain, and if $R$ is a domain, the polynomial ring $R[x]$ is also a domain.
+  \end{itemize}
+  \item \textbf{Zero Divisor}: An element $a$ of a ring that is nonzero and there is another nonzero element $b$ such that $ab = 0$
+  \item \textbf{Cancellation Law}: If $ab = ac$ and $a \neq 0$ then $b = c$
+  \begin{itemize}
+    \item Integral domains satisfy this law
+  \end{itemize}
+  \item Let $F$ be the set of equivalence classes of fractions of elements of an integral domain $R$
+  \begin{enumerate}
+    \item[(a)] $F$ is a field, called the \textit{fraction field} of $R$
+    \item[(b)] $R$ embeds as a subring of $F$ by the rule $a \leadsto a/1$
+    \item[(c)] If $R$ is embedded as a subring of another field $\mathcal{F}$, the rule $a/b = ab^{-1}$ embeds $F$ into $\mathcal{F}$ too (\textit{mapping property})
+  \end{enumerate}
+  \item \textbf{Mapping Property}: Say the embedding of $R$ into $\mathcal{F}$ is given by the injective ring homomorphism $\phi: R \to \mathcal{F}$. The mapping property states that the rule $\Phi(a/b) = \phi(a)\phi(b)^{-1}$ extends $\phi$ to an injective homomorphism $\Phi: F \to \mathcal{F}$
+  \item \textbf{Rational Function}: A fraction of polynomials
+  \item \textbf{Field of Rational Function in \textit{x}}: Fractional field of the polynomial ring $K[x]$ where $K$ is a field and coefficients are in $K$. This field is usually denoted $K(x)$:
+  \begin{center}
+    K(x) = \left\{
+      \begin{tabular}{ll}
+        equivalence classes of fractions $f/g$, where $f$ and $g$ \\
+        are polynomials, and $g$ is not the zero polynomial\\
+      \end{tabular}
+    \right\}
+  \end{center}
+\end{itemize}
+
+\subsection*{11.8: Maximal Ideals}
+\begin{itemize}
   \item 
 \end{itemize}
 
