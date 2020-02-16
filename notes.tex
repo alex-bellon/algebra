@@ -297,6 +297,9 @@
 \begin{itemize}
   \item Let $\phi: R \to F$ where $R$ is a ring and $F$ is a field. $F$ has two ideals, the zero ideal (0) and the unit ideal (1). The inverse image of the zero ideal is the kernel $I$ of $\phi$ and the inverse image of the unit ideal is the unit ideal of $R$. Based on the Correspondence Theorem, we know that the only ideals of $R$ that contain $I$ are $I$ and $R$. This means that $I$ is called the \textit{maximal ideal}.
   \item \textbf{Maximal Ideal}: A \textit{maximal ideal} $M$ of a ring $R$ is an ideal that isn't equal to $R$ and isn't contained in any ideal other than $M$ and $R$. If an ideal $I$ contains $M$, then $I = M \lor I = R$.
+  \begin{itemize}
+    \item A maximal ideal must be a proper ideal
+  \end{itemize}
   \item Let $\phi: R \to R'$ be a surjective ring homomorphism with kernel $I$
   \begin{enumerate}
     \item[(a)] The image $R'$ is a field iff $I$ is a maximal ideal
@@ -318,6 +321,15 @@
     \item[(c)] Let $V$ be a vector space over a field, and suppose that $V$ is spanned by a countable set of vectors.
     \item[(d)] When $\mathbb{C}(x)$ is made into a vector space over $\mathbb{C}$, the uncountable set of rational functions $(x - \alpha)^{-1}$ with $\alpha$ in $\mathbb{C}$ is independent.
   \end{enumerate}
+\end{itemize}
+
+\subsection*{11.9: Algebraic Geometry}
+\begin{itemize}
+  \item \textbf{Zero}: A point $(a_1,...,a_n)$ of $\mathbb{C}^n$ is called a \textit{zero} of a polynomial $f(x_1,...x_n)$ of $n$ variables if $f(a_1,...,a_n) = 0$. We say that $f$ \textit{vanishes} at that point.
+  \begin{itemize}
+    \item \textbf{Common Zeros}: The \textit{common zeros} of a set $\{f_1,...,f_r\}$ of polynomials are the points of $\mathbb{C}^n$ at which all of them vanish (the solutions of the system of equations $f_1 = \cdots = f_n = 0$)
+    \item \textbf{(Algebraic) Variety}: A subset $V$ of complex $n$-space $\mathbb{C}^n$ that is the set of common zeros of a finite number of polynomials in $n$ variables
+  \end{itemize}
 \end{itemize}
 
 \newpage
@@ -464,22 +476,28 @@ $\mathbb{Z}[\alpha, \beta] \neq \mathbb{Z}[\gamma]$, but I don't know how to pro
 \begin{proof}
 
 \end{proof}
+
 \textbf{Problem 11.7.1}
 \begin{proof}
-
+for any element R, you can construct a map
+show there are inverses
 \end{proof}
+
 \textbf{Problem 11.7.2}
 \begin{proof}
 
 \end{proof}
+
 \textbf{Problem 11.7.5}
 \begin{proof}
 
 \end{proof}
-\textbf{Problem 11.8.1}
-\begin{proof}
 
+\textbf{Problem 11.8.1}: Which principal ideals in $\mathbb{Z}[x]$ are maximal ideals?
+\begin{proof}
+$\mathbb{Z}[x]$ contains all polynomials of the form $a_nx^n + \cdots + a_1x + a_0$ where $a_i$ are in $\mathbb{Z}$
 \end{proof}
+
 \textbf{Problem 11.8.2}
 \begin{proof}
 
